@@ -31,7 +31,7 @@ export class Analytics {
   private _debug = false;
   private _lastEventTimestamps: Record<string, number> = {}; // Tracks last event times
   private _debounceInterval = 1000; // Default debounce interval in milliseconds (5 seconds)
-  private _disableUrlTracking = false;
+  private _disableUrlTracking = false; // Disable tracking page URL and .page() calls
   private _redactedProperties: string[] = [];
 
   constructor(config?: AnalyticsConfig) {
@@ -88,7 +88,7 @@ export class Analytics {
   }
 
   page(name?: string, properties?: {}) {
-    if (!this._segment) return;
+    if (!this._segment || this._disableUrlTracking) return;
     properties = this.redact(properties);
     this._segment.page(name, properties);
   }
