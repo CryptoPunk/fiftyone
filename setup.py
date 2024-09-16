@@ -65,7 +65,7 @@ INSTALL_REQUIRES = [
     "scipy",
     "setuptools",
     "sseclient-py>=1.7.2,<2",
-    "sse-starlette>=0.10.3,<1",
+    "sse-starlette>=0.10.3",
     "starlette>=0.24.0",
     "strawberry-graphql",
     "tabulate",
