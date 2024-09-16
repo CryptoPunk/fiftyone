@@ -13,7 +13,7 @@ import re
 from setuptools import setup, find_packages
 
 
-VERSION = "0.25.1"
+VERSION = "0.25.2"
 
 
 def get_version():
@@ -65,7 +65,7 @@ INSTALL_REQUIRES = [
     "scipy",
     "setuptools",
     "sseclient-py>=1.7.2,<2",
-    "sse-starlette>=0.10.3,<1",
+    "sse-starlette>=0.10.3",
     "starlette>=0.24.0",
     "strawberry-graphql==0.138.1",
     "tabulate",
